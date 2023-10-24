@@ -14,7 +14,6 @@
             <playerbase_percent>2%</playerbase_percent>
         </rank>
     </ranks>
-
     <teams>
         <team>
             <name>Team 1</name>
@@ -23,19 +22,16 @@
                     <username gametag="1234">Player 1</username>
                     <rank division="1">Gold</rank>
                     <server avg_ping="20">EU</server>
-
                     <personal_info access="sensitive">
                         <fullname>Adam Sandler</fullname>
                         <age>28</age>
                         <country>Poland</country>
                     </personal_info>
-
                     <socials>
                         <link src="https://twitter.com/">Twitter | X</link>
                         <link src="https://instagram.com/">Instagram</link>
                         <link src="https://facebook.com/">Facebook</link>
                     </socials>
-
                     <favorite>
                         <weapon>
                             <name>Phantom</name>
@@ -68,6 +64,4 @@
             </teams>
         </tournament>
     </tournaments>
-
-
 </valorant_state>
