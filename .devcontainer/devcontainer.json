@@ -12,7 +12,9 @@
 				"GitHub.copilot-labs",
 				"eamodio.gitlens",
 				"ritwickdey.LiveServer",
-				"formulahendry.auto-complete-tag"
+				"formulahendry.auto-complete-tag",
+				"wayou.vscode-todo-highlight",
+				"alefragnani.Bookmarks"
 			]
 		}
 	}

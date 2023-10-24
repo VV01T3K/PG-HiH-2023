@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<valorant_state>
+    <ranks>
+        <!-- TODO: -->
+        <rank>
+            <rank_name>Diamond</rank_name>
+            <divisions> 1 2 3 </divisions> <!-- list -->
+            <image src="...">diamond</image>
+            <playerbase_percent>5%</playerbase_percent>
+        </rank>
+        <rank>
+            <rank_name>Immortal</rank_name>
+            <divisions> 1 2 3 </divisions> <!-- list -->
+            <image src="...">immortal</image>
+            <playerbase_percent>3%</playerbase_percent>
+        </rank>
+        <rank>
+            <rank_name>Radiant</rank_name>
+            <divisions> 1 </divisions> <!-- list -->
+            <image src="...">radiant</image>
+            <playerbase_percent>2%</playerbase_percent>
+        </rank>
+    </ranks>
+
+    <teams>
+        <team>
+            <name>Team 1</name>
+            <players>
+                <player active="yes|no">
+                    <username gametag="1234">Player 1</username>
+                    <rank division="1">Gold</rank>
+                    <server avg_ping="20">EU</server>
+
+                    <personal_info access="sensitive">
+                        <fullname>Adam Sandler</fullname>
+                        <age>28</age>
+                        <country>Poland</country>
+                    </personal_info>
+
+                    <socials>
+                        <link src="https://twitter.com/">Twitter | X</link>
+                        <link src="https://instagram.com/">Instagram</link>
+                        <link src="https://facebook.com/">Facebook</link>
+                    </socials>
+
+                    <favorite>
+                        <weapon>
+                            <name>Phantom</name>
+                            <skin upgraded="yes">Prime</skin>
+                        </weapon>
+                        <agent>Jett</agent>
+                        <mouse mousepad="yes" type="ambidextrous" dpi="1800">Logitech G Pro</mouse>
+                        <keyboard type="mechanical">Logitech G Pro</keyboard>
+                        <monitor model="XL2546">
+                            <name>BenQ Zowie</name>
+                            <size>27"</size>
+                            <panel sync_tech="G-Sync">IPS</panel>
+                            <resolution>2560 x 1440</resolution>
+                            <refresh_rate>240Hz</refresh_rate>
+                        </monitor>
+                    </favorite>
+                </player>
+                <player active="yes|no">
+                    <username gametag="1234">Player 1</username>
+                    <rank division="1">Gold</rank>
+                    <server avg_ping="20">EU</server>
+
+                    <personal_info access="sensitive">
+                        <fullname>Adam Sandler</fullname>
+                        <age>28</age>
+                        <country>Poland</country>
+                    </personal_info>
+
+                    <socials>
+
+                        <!-- links -->
+                    </socials>
+
+                    <favorite>
+                        <weapon>
+                            <name>Phantom</name>
+                            <skin upgraded="yes">Prime</skin>
+                        </weapon>
+                        <agent>Jett</agent>
+                        <mouse mousepad="yes" type="ambidextrous" dpi="1800">Logitech G Pro</mouse>
+                        <keyboard type="mechanical">Logitech G Pro</keyboard>
+                        <monitor model="XL2546">
+                            <name>BenQ Zowie</name>
+                            <size>27"</size>
+                            <panel sync_tech="G-Sync">IPS</panel>
+                            <resolution>2560 x 1440</resolution>
+                            <refresh_rate>240Hz</refresh_rate>
+                        </monitor>
+                    </favorite>
+                </player>
+                <player active="yes|no">
+                    <username gametag="1234">Player 1</username>
+                    <rank division="1">Gold</rank>
+                    <server avg_ping="20">EU</server>
+
+                    <personal_info access="sensitive">
+                        <fullname>Adam Sandler</fullname>
+                        <age>28</age>
+                        <country>Poland</country>
+                    </personal_info>
+
+                    <socials>
+                        <!-- links -->
+                    </socials>
+
+                    <favorite>
+                        <weapon>
+                            <name>Phantom</name>
+                            <skin upgraded="yes">Prime</skin>
+                        </weapon>
+                        <agent>Jett</agent>
+                        <mouse mousepad="yes" type="ambidextrous" dpi="1800">Logitech G Pro</mouse>
+                        <keyboard type="mechanical">Logitech G Pro</keyboard>
+                        <monitor model="XL2546">
+                            <name>BenQ Zowie</name>
+                            <size>27"</size>
+                            <panel sync_tech="G-Sync">IPS</panel>
+                            <resolution>2560 x 1440</resolution>
+                            <refresh_rate>240Hz</refresh_rate>
+                        </monitor>
+                    </favorite>
+                </player>
+
+
+            </players>
+
+
+        </team>
+        <team>
+            <name>Team 1</name>
+            <players>
+                <player active="yes|no">
+                    <username gametag="1234">Player 1</username>
+                    <rank division="1">Gold</rank>
+                    <server avg_ping="20">EU</server>
+
+                    <personal_info access="sensitive">
+                        <fullname>Adam Sandler</fullname>
+                        <age>28</age>
+                        <country>Poland</country>
+                    </personal_info>
+
+                    <socials>
+                        <!-- links -->
+                    </socials>
+
+                    <favorite>
+                        <weapon>
+                            <name>Phantom</name>
+                            <skin upgraded="yes">Prime</skin>
+                        </weapon>
+                        <agent>Jett</agent>
+                        <mouse mousepad="yes" type="ambidextrous" dpi="1800">Logitech G Pro</mouse>
+                        <keyboard type="mechanical">Logitech G Pro</keyboard>
+                        <monitor model="XL2546">
+                            <name>BenQ Zowie</name>
+                            <size>27"</size>
+                            <panel sync_tech="G-Sync">IPS</panel>
+                            <resolution>2560 x 1440</resolution>
+                            <refresh_rate>240Hz</refresh_rate>
+                        </monitor>
+                    </favorite>
+                </player>
+                <player active="yes|no">
+                    <username gametag="1234">Player 1</username>
+                    <rank division="1">Gold</rank>
+                    <server avg_ping="20">EU</server>
+
+                    <personal_info access="sensitive">
+                        <fullname>Adam Sandler</fullname>
+                        <age>28</age>
+                        <country>Poland</country>
+                    </personal_info>
+
+                    <socials>
+                        <!-- links -->
+                    </socials>
+
+                    <favorite>
+                        <weapon>
+                            <name>Phantom</name>
+                            <skin upgraded="yes">Prime</skin>
+                        </weapon>
+                        <agent>Jett</agent>
+                        <mouse mousepad="yes" type="ambidextrous" dpi="1800">Logitech G Pro</mouse>
+                        <keyboard type="mechanical">Logitech G Pro</keyboard>
+                        <monitor model="XL2546">
+                            <name>BenQ Zowie</name>
+                            <size>27"</size>
+                            <panel sync_tech="G-Sync">IPS</panel>
+                            <resolution>2560 x 1440</resolution>
+                            <refresh_rate>240Hz</refresh_rate>
+                        </monitor>
+                    </favorite>
+                </player>
+                <player active="yes|no">
+                    <username gametag="1234">Player 1</username>
+                    <rank division="1">Gold</rank>
+                    <server avg_ping="20">EU</server>
+
+                    <personal_info access="sensitive">
+                        <fullname>Adam Sandler</fullname>
+                        <age>28</age>
+                        <country>Poland</country>
+                    </personal_info>
+
+                    <socials>
+                        <!-- links -->
+                    </socials>
+
+                    <favorite>
+                        <weapon>
+                            <name>Phantom</name>
+                            <skin upgraded="yes">Prime</skin>
+                        </weapon>
+                        <agent>Jett</agent>
+                        <mouse mousepad="yes" type="ambidextrous" dpi="1800">Logitech G Pro</mouse>
+                        <keyboard type="mechanical">Logitech G Pro</keyboard>
+                        <monitor model="XL2546">
+                            <name>BenQ Zowie</name>
+                            <size>27"</size>
+                            <panel sync_tech="G-Sync">IPS</panel>
+                            <resolution>2560 x 1440</resolution>
+                            <refresh_rate>240Hz</refresh_rate>
+                        </monitor>
+                    </favorite>
+                </player>
+
+
+            </players>
+
+
+        </team>
+    </teams>
+
+    <tournaments>
+        <tournament>
+            <name>Valorant Masters</name>
+            <location>Reykjavik, Iceland</location>
+            <date>May 24-30, 2021</date>
+            <prize_pool currency="$">600,000</prize_pool>
+            <teams>
+                <team>Team 1</team>
+                <team>Team 2</team>
+            </teams>
+        </tournament>
+        <tournament>
+            <name>Valorant Champions Tour</name>
+            <location>Online</location>
+            <date>June 2021</date>
+            <prize_pool currency="zł">50,000</prize_pool>
+            <teams>
+                <team>Team 1</team>
+                <team>Team 2</team>
+            </teams>
+        </tournament>
+    </tournaments>
+
+
+</valorant_state>
