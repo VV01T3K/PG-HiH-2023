@@ -15,8 +15,7 @@
 				"formulahendry.auto-complete-tag",
 				"wayou.vscode-todo-highlight",
 				"alefragnani.Bookmarks",
-				"shd101wyy.markdown-preview-enhanced",
-				"DavidAnson.vscode-markdownlint"
+				"shd101wyy.markdown-preview-enhanced"
 			]
 		}
 	}
