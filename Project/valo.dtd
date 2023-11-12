@@ -1,5 +1,12 @@
 <!ELEMENT valorant_state (ranks, teams, tournaments)>
 
+
+<!ENTITY both_handed "ambidextrous">
+
+<!ENTITY FHD "1920 x 1080">
+<!ENTITY QHD "2560 x 1440">
+<!ENTITY UHD "3840 x 2160">
+
 <!ELEMENT name (#PCDATA)>
 <!ELEMENT teams (team+)>
 
@@ -23,7 +30,7 @@
                 <!ELEMENT server (#PCDATA)>
                     <!ATTLIST server avg_ping CDATA #IMPLIED>
                 <!ELEMENT personal_info (fullname, age, country)>
-                    <!ATTLIST personal_info access (limited|free|prohibited) #REQUIRED>
+                    <!ATTLIST personal_info access (limited|free|prohibited) "limited">
                     <!ELEMENT fullname (#PCDATA)>
                     <!ELEMENT age (#PCDATA)>
                     <!ELEMENT country (#PCDATA)>
@@ -46,7 +53,7 @@
                         <!ATTLIST monitor model CDATA #REQUIRED>
                         <!ELEMENT size (#PCDATA)>
                         <!ELEMENT panel (#PCDATA)>
-                            <!ATTLIST panel sync_tech CDATA #IMPLIED>
+                            <!ATTLIST panel sync_tech CDATA "FreeSync">
                         <!ELEMENT resolution (#PCDATA)>
                         <!ELEMENT refresh_rate (#PCDATA)>
     
@@ -55,5 +62,5 @@
             <!ELEMENT location (#PCDATA)>
             <!ELEMENT date (#PCDATA)>
             <!ELEMENT prize_pool (#PCDATA)>
-                <!ATTLIST prize_pool currency CDATA #REQUIRED>
+                <!ATTLIST prize_pool currency CDATA "PLN">
             
