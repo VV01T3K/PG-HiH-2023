@@ -1,0 +1,64 @@
+<tournament>
+    <name>Valorant Championship Series</name>
+    <location>Los Angeles, CA</location>
+    <start_date>2022-05-01</start_date>
+    <end_date>2022-05-15</end_date>
+    <teams>
+        <team>
+            <name>Team A</name>
+            <player>
+                <name>John Doe</name>
+                <rank>Gold 2</rank>
+                <agent>Viper</agent>
+                <level>25</level>
+                <matches_played>50</matches_played>
+                <matches_won>30</matches_won>
+                <best_weapon>
+                    <name>Vandal</name>
+                    <skin>Reaver</skin>
+                    <kills>0</kills>
+                    <stats>
+                        <acurracy>
+                            <value></value>
+                            <shots_fired></shots_fired>
+                        </acurracy>
+                        <headshots>0</headshots>
+                        <bodyshots>0</bodyshots>
+                        <legshots>0</legshots>
+                    </stats>
+
+                </best_weapon>
+            </player>
+            <player>
+                <name>Jane Doe</name>
+                <rank>Silver 3</rank>
+                <agent>Phoenix</agent>
+                <level>20</level>
+                <matches_played>40</matches_played>
+                <matches_won>20</matches_won>
+                <best_weapon>Operator</best_weapon>
+            </player>
+        </team>
+        <team>
+            <name>Team B</name>
+            <player>
+                <name>Bob Smith</name>
+                <rank>Platinum 1</rank>
+                <agent>Jett</agent>
+                <level>30</level>
+                <matches_played>60</matches_played>
+                <matches_won>40</matches_won>
+                <best_weapon>Phantom</best_weapon>
+            </player>
+            <player>
+                <name>Alice Johnson</name>
+                <rank>Diamond 2</rank>
+                <agent>Brimstone</agent>
+                <level>35</level>
+                <matches_played>70</matches_played>
+                <matches_won>50</matches_won>
+                <best_weapon>Ares</best_weapon>
+            </player>
+        </team>
+    </teams>
+</tournament>
