@@ -1,0 +1,59 @@
+<!ELEMENT valorant_state (ranks, teams, tournaments)>
+
+<!ELEMENT name (#PCDATA)>
+<!ELEMENT teams (team+)>
+
+    <!ELEMENT ranks (rank*)>
+        <!ELEMENT rank (name,divisions, image, playerbase_percent)>
+            <!ELEMENT divisions (#PCDATA)>
+            <!ELEMENT image (#PCDATA)>
+                <!ATTLIST image src CDATA #REQUIRED>
+            <!ELEMENT playerbase_percent (#PCDATA)>
+    
+        <!ELEMENT team (name , players?)>
+            <!ATTLIST team id ID #REQUIRED>
+            <!ELEMENT players (player*)>
+            <!ELEMENT player (username, player_rank, server?, personal_info?, socials? ,favourites?)>
+                <!ATTLIST player id ID #REQUIRED>
+                <!ATTLIST player active (yes|no) #REQUIRED>
+                <!ELEMENT username (#PCDATA)>
+                    <!ATTLIST username gametag CDATA #REQUIRED>
+                <!ELEMENT player_rank (#PCDATA)>
+                    <!ATTLIST player_rank division CDATA #IMPLIED>
+                <!ELEMENT server (#PCDATA)>
+                    <!ATTLIST server avg_ping CDATA #IMPLIED>
+                <!ELEMENT personal_info (fullname, age, country)>
+                    <!ATTLIST personal_info access (limited|free|prohibited) #REQUIRED>
+                    <!ELEMENT fullname (#PCDATA)>
+                    <!ELEMENT age (#PCDATA)>
+                    <!ELEMENT country (#PCDATA)>
+                <!ELEMENT socials (link*)>
+                    <!ELEMENT link (#PCDATA)>
+                        <!ATTLIST link src CDATA #REQUIRED>
+                <!ELEMENT favourites (weapon?, agent?, mouse?, keyboard?, monitor?)>
+                    <!ELEMENT weapon (name,skin*)>
+                        <!ELEMENT skin (#PCDATA)>
+                            <!ATTLIST skin src CDATA #REQUIRED>
+                            <!ATTLIST skin upgraded (yes|no) #REQUIRED>
+                    <!ELEMENT agent (#PCDATA)>
+                    <!ELEMENT mouse (#PCDATA)>
+                        <!ATTLIST mouse mousepad (yes|no) #REQUIRED>
+                        <!ATTLIST mouse type CDATA #REQUIRED>
+                        <!ATTLIST mouse dpi CDATA #REQUIRED>
+                    <!ELEMENT keyboard (#PCDATA)>
+                        <!ATTLIST keyboard type CDATA #REQUIRED>
+                    <!ELEMENT monitor (name, size, panel, resolution, refresh_rate)>
+                        <!ATTLIST monitor model CDATA #REQUIRED>
+                        <!ELEMENT size (#PCDATA)>
+                        <!ELEMENT panel (#PCDATA)>
+                            <!ATTLIST panel sync_tech CDATA #IMPLIED>
+                        <!ELEMENT resolution (#PCDATA)>
+                        <!ELEMENT refresh_rate (#PCDATA)>
+    
+    <!ELEMENT tournaments (tournament*)>
+        <!ELEMENT tournament (name, location, date, prize_pool, teams)>
+            <!ELEMENT location (#PCDATA)>
+            <!ELEMENT date (#PCDATA)>
+            <!ELEMENT prize_pool (#PCDATA)>
+                <!ATTLIST prize_pool currency CDATA #REQUIRED>
+            
