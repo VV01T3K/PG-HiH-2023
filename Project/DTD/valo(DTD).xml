@@ -1,29 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE valorant_state SYSTEM "valo.dtd">
 
 <valorant_state>
     <ranks>
         <rank>
-            <rank_name>Immortal</rank_name>
-            <divisions> 1 2 3 </divisions> <!-- list -->
+            <name>Immortal</name>
+            <divisions> 1 2 3 </divisions>
             <image src="...">immortal</image>
             <playerbase_percent>3%</playerbase_percent>
         </rank>
         <rank>
-            <rank_name>Radiant</rank_name>
-            <divisions> 1 </divisions> <!-- list -->
+            <name>Radiant</name>
+            <divisions> 1 </divisions>
             <image src="...">radiant</image>
             <playerbase_percent>2%</playerbase_percent>
         </rank>
     </ranks>
     <teams>
-        <team>
+        <team id="team-1">
             <name>Team 1</name>
             <players>
-                <player active="yes|no">
+                <player id="player-1" active="yes">
                     <username gametag="1234">Player 1</username>
-                    <rank division="1">Gold</rank>
+                    <player_rank division="1">Gold</player_rank>
                     <server avg_ping="20">EU</server>
-                    <personal_info access="sensitive">
+                    <personal_info access="prohibited">
                         <fullname>Adam Sandler</fullname>
                         <age>28</age>
                         <country>Poland</country>
@@ -33,22 +34,22 @@
                         <link src="https://instagram.com/">Instagram</link>
                         <link src="https://facebook.com/">Facebook</link>
                     </socials>
-                    <favorite>
+                    <favourites>
                         <weapon>
                             <name>Phantom</name>
-                            <skin upgraded="yes">Prime</skin>
+                            <skin src="..." upgraded="yes">Prime</skin>
                         </weapon>
                         <agent>Jett</agent>
-                        <mouse mousepad="yes" type="ambidextrous" dpi="1800">Logitech G Pro</mouse>
+                        <mouse mousepad="yes" type="&both_handed;" dpi="1800">Logitech G Pro</mouse>
                         <keyboard type="mechanical">Logitech G Pro</keyboard>
                         <monitor model="XL2546">
                             <name>BenQ Zowie</name>
                             <size>27"</size>
                             <panel sync_tech="G-Sync">IPS</panel>
-                            <resolution>2560 x 1440</resolution>
+                            <resolution>&QHD;</resolution>
                             <refresh_rate>240Hz</refresh_rate>
                         </monitor>
-                    </favorite>
+                    </favourites>
                 </player>
             </players>
         </team>
@@ -60,8 +61,12 @@
             <date>May 24-30, 2021</date>
             <prize_pool currency="$">600,000</prize_pool>
             <teams>
-                <team>Team 1</team>
-                <team>Team 2</team>
+                <team id="team_1">
+                    <name>Team 1</name>
+                </team>
+                <team id="team_2">
+                    <name>Team 2</name>
+                </team>
             </teams>
         </tournament>
     </tournaments>
