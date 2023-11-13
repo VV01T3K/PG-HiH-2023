@@ -16,7 +16,8 @@
 				"wayou.vscode-todo-highlight",
 				"alefragnani.Bookmarks",
 				"shd101wyy.markdown-preview-enhanced",
-				"stateful.runme"
+				"stateful.runme",
+				"deltaxml.xslt-xpath"
 			]
 		}
 	}

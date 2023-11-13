@@ -1,0 +1,40 @@
+valorant_state {
+    font-family: Arial, sans-serif;
+}
+
+ranks, teams, tournaments {
+    margin: 20px;
+}
+
+rank, team, tournament {
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+rank_name, name {
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+divisions, image, playerbase_percent, players, location, date, prize_pool {
+    margin-left: 10px;
+}
+
+player {
+    margin: 10px 0;
+}
+
+username, rank, server, personal_info, socials, favorite {
+    display: block;
+    margin: 5px 0;
+}
+
+link {
+    color: blue;
+    text-decoration: none;
+}
+
+weapon, agent, mouse, keyboard, monitor {
+    margin-left: 10px;
+}
