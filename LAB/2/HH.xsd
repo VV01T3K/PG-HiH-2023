@@ -1,0 +1,61 @@
+﻿<?xml version="1.0"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" attributeFormDefault="unqualified" elementFormDefault="qualified">
+<!-- student's name and surname-->
+	<!--element 'hipertext' jest zadeklarowany globalnie. W pliku XML jest elementem głównym - korzeniem-->
+	<xs:element name="hipertext" type="hipertextType"/>  
+
+	<!-- typ hipertextType jest zdefiniowany globalnie i użyty w deklaracji elementu hipertext-->
+	<xs:complexType name="hipertextType">
+		<xs:sequence>
+			<xs:element name="author" type="authorType" /> 	<!--lokalna deklaracja elementu author. Typ dla tego elementu został zdefiniowany globalnie-->
+			<xs:element name="definition" >   <!--lokalna deklaracja elementu definition-->
+				<xs:simpleType> 					<!--lokalna definicja typu prostego dla elementu definition-->
+					<xs:restriction base="xs:string">
+						<xs:minLength value="15"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="systems" type="systemsType" minOccurs="0"/>	<!--lokalna deklaracja elementu systems, który jest typu złożonego zdefiniowanego globalnie-->
+		</xs:sequence>
+	</xs:complexType>
+
+	<!-- typ authorType jest typem złożonym zdefiniowanym globalnie i został użyty w deklaracji elementu author -->
+	<xs:complexType name="authorType">
+		<xs:sequence>
+			<xs:element name="name" type="xs:string" />		<!--lokalna deklaracja elementu name, który jest typu wbudowanego string-->
+			<xs:element name="surname" type="xs:string" />	<!--lokalna deklaracja elementu surname, który jest typu wbudowanego string-->
+		</xs:sequence>
+	</xs:complexType>
+
+	<!-- typ systemsType jest typem złożonym zdefiniowanym globalnie i został użyty w deklaracji elementu systems -->
+	<xs:complexType name="systemsType">
+		<xs:sequence>
+			<xs:element name="system" minOccurs="0" maxOccurs="unbounded">	<!--element system jest zadeklarowany lokalnie. Typ dla tego elementu również został zdefiniowany lokalnie-->
+				<xs:complexType>		<!--lokalna definicja typu złożonego dla elementu system -->
+					<xs:sequence>
+						<xs:element name="name" type="xs:string" />			<!--lokalna deklaracja elementu name, który jest typu wbudowanego string-->
+										 <!--lokalna deklaracja elementu description, który jest typu wbudowanego string-->
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name="adressType">
+		<xs:simpleContent>
+			<xs:extension base="xs:string">
+				<xs:attribute name="source" type="xs:anyURI" use="required"/>
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+
+
+</xs:schema>
+
+<!--
+deklaracja elementu globalnego
+<xs:element name="elemName" type="elemType" />
+
+deklaracja elementu poprzez referencję
+<xs:element ref="elemName" minOccurs="0" maxOccurs="unbounded"/>
+-->

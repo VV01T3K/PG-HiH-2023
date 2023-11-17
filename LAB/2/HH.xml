@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<hipertext xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+   xsi:noNamespaceSchemaLocation="HH.xsd">
+	<author>
+		<name>student's name</name>
+		<surname>student's surname </surname>
+	</author>
+	<definition>
+		Hipertext is a nonlinear text material.
+	</definition>
+	<systems>
+		<system>
+			<name>HyperCard</name>
+		</system>
+		<system>
+			<name>World Wide Web</name>
+		</system>
+	</systems>
+</hipertext>

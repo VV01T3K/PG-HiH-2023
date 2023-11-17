@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="HH2.xslt"?>	<!--Powiązanie pliku XML z plikiem transformacji-->
-<hypertext>
+<hipertext xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+   xsi:noNamespaceSchemaLocation="HH.xsd">
 	<author>
 		<name>student's name</name>
 		<surname>student's surname </surname>
@@ -8,7 +8,7 @@
 	<definition>
 		Hipertext is a nonlinear text material.
 	</definition>
-	<people>
+	<persons>
 		<person alive="no">
 			<name>Vannevar</name>
 			<surname>Bush</surname>
@@ -19,15 +19,6 @@
 			</about>
 			<image source="img/Vannevar-Bush.jpg">Vannevar Bush</image>
 			<link source="https://www.britannica.com/topic/Harvard-University">Vannevar Bush</link>
-			<achievementList>
-				<achievement n="1">
-					<title>Memex - "memory extender"</title>
-					<description>
-						Bush described the Memex as "a sort of mechanized private file and library" and as "a device in which an individual stores his books, records, and communications, and which is mechanized so that it may be consulted with exceeding speed and flexibility." The Memex would store this information on microfilm, which would be kept in the user's desk. This desk was intended to have several microfilm projection positions to enable the user to compare different microfilms, in a manner very similar to the windows that became popular on personal computers more than forty years later. The Memex would have a scanner to enable the user to input new material, and it would also allow the user to make handwritten marginal notes and comments. But Bush envisaged that most of the Memex contents are purchased on microfilm ready for insertion. Books of all sorts, pictures, current periodicals, newspapers, are thus obtained and dropped into place. Business correspondence takes the same path. Actually we have not yet reached the state of hypertext development where there is a significant amount of preprocessed information for sale that can be integrated with a user's existing hypertext structure.
-					</description>
-					<image source="img/memex.jpg">Project of Memex</image>
-				</achievement>
-			</achievementList>		
 		</person>
 		<person alive="yes">
 			<name>Tim</name>
@@ -38,44 +29,16 @@
 			</about>
 			<image source="img/Tim.jpg">Sir Tim Berners-Lee</image>
 			<link source="https://www.britannica.com/biography/Tim-Berners-Lee">Sir Tim Berners-Lee</link>
-			<achievementList>
-				<achievement n="1">
-					<title>HTML</title>
-					<description>
-						Hypertext Markup Language - The markup (formatting) language for the web.
-					</description>
-					<link source="https://www.w3schools.com/html/">HTML w3schools</link>
-				</achievement>
-				<achievement n="2">
-					<title>URI</title>
-					<description>
-						Uniform Resource Identifier. A kind of "address" that is unique and used to identify to each resource on the web.
-					</description>
-				</achievement>
-				<achievement n="3">
-					<title>HTTP</title>
-					<description>
-						Hypertext Transfer Protocol. Allows for the retrieval of linked resources from across the web.
-					</description>
-				</achievement>
-				<achievement n="4">
-					<title>Browser</title>
-					<description>
-						A computer program with a graphical user interface for displaying and navigating between web pages.
-					</description>
-					<image source="img/browser.png">The first web page</image>
-				</achievement>
-			</achievementList>
 		</person>
-	</people>
-	<systemList>
+	</persons>
+	<systems>
 		<system>
 			<name>HyperCard</name>
 			<description>
 				HyperCard was a powerful, yet extremely easy to use tool for creating “stacks” — essentially flat-file databases that used hyperlinks as a way of navigating a stack of “cards”.
 			</description>
-			<image source="img/hypercard.jpg">HyperCard system</image>
-			<link source="https://hypercard.org/">HyperCard main webpage</link>
+			<image source="hypercard.jpg">HyperCard system</image>
+			<link source="https://hypercard.org/">HyperCard</link>
 			<link source="https://www.youtube.com/watch?v=2K1C5BZKP3I">Why HyperCard was so f***ing Great!</link>
 			<link source="https://eshop.macsales.com/blog/64930-hypercard-one-stack-at-a-time/">HyperCard</link>
 		</system>
@@ -85,7 +48,6 @@
 				The World Wide Web is a collection of linked resources and documents, connected by hyperlinks and URLs
 			</description>
 			<link source="https://www.w3schools.com/html/">HTML w3schools</link>
-			<link source="https://www.w3.org/">World Wide Web Consortium</link>
 		</system>
-	</systemList>
-</hypertext>
+	</systems>
+</hipertext>
