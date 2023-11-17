@@ -3,18 +3,17 @@
 <valorant_state xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:noNamespaceSchemaLocation="xvalo.xsd">
 
-<valorant_state>
     <ranks>
         <rank>
             <name>Immortal</name>
-            <divisions> 1 2 3 </divisions> <!-- list -->
-            <image src="...">immortal</image>
+            <divisions>1 2 3</divisions> <!-- list -->
+            <image src="server/iamge">immortal</image>
             <playerbase_percent>3%</playerbase_percent>
         </rank>
         <rank>
             <name>Radiant</name>
-            <divisions> 1 </divisions> <!-- list -->
-            <image src="...">radiant</image>
+            <divisions>1</divisions> <!-- list -->
+            <image src="server/iamge">radiant</image>
             <playerbase_percent>2%</playerbase_percent>
         </rank>
     </ranks>
@@ -29,21 +28,23 @@
                     <personal_info access="prohibited">
                         <fullname>Adam Sandler</fullname>
                         <age>28</age>
+                        <!-- <age>dwadzieścia</age> -->
                         <country>Poland</country>
                     </personal_info>
                     <socials>
-                        <link src="https://twitter.com/">Twitter | X</link>
-                        <link src="https://instagram.com/">Instagram</link>
-                        <link src="https://facebook.com/">Facebook</link>
+                        <link url="https://twitter.com/">Twitter | X</link>
+                        <link url="https://instagram.com/">Instagram</link>
+                        <link url="https://facebook.com/">Facebook</link>
                     </socials>
                     <favourites>
                         <weapon>
                             <name>Phantom</name>
-                            <skin src="..." upgraded="yes">Prime</skin>
+                            <skin src="server/iamge" upgraded="yes">Prime</skin>
                         </weapon>
                         <agent>Jett</agent>
-                        <mouse mousepad="yes" type="ambidextrous" dpi="1800">Logitech G Pro</mouse>
-                        <keyboard type="mechanical">Logitech G Pro</keyboard>
+                        <mouse>Logitech G Pro</mouse>
+                        <!-- <tablet>Wacom Intuos Pro</tablet> -->
+                        <keyboard>Logitech G Pro</keyboard>
                         <monitor model="XL2546">
                             <name>BenQ Zowie</name>
                             <size>27"</size>
@@ -52,16 +53,21 @@
                             <refresh_rate>240Hz</refresh_rate>
                         </monitor>
                     </favourites>
+                    <experience>562354</experience>
                 </player>
             </players>
         </team>
     </teams>
     <tournaments>
         <tournament>
-            <name>Valorant Masters</name>
+            <name>Valorant Masters<edition>1</edition>
+            </name>
             <location>Reykjavik, Iceland</location>
-            <date>May 24-30, 2021</date>
-            <prize_pool currency="$">600,000</prize_pool>
+            <date>
+                <start>2021-05-24</start>
+                <end>2021-05-30</end>
+            </date>
+            <prize_pool currency="PLN">600,000</prize_pool>
             <teams>
                 <team id="team_1">
                     <name>Team 1</name>

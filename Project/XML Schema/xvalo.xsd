@@ -1,3 +1,328 @@
 <?xml version="1.0"?>
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+
+    <xs:element name="valorant_state" />
+
+    <xs:complexType name="valorant_state">
+        <xs:sequence>
+            <xs:element name="ranks" type="ranksType" />
+            <xs:element name="teams" type="teamsType" />
+            <xs:element name="tournaments" type="tournamentsType" />
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="ranksType">
+        <xs:sequence>
+            <xs:element name="rank" type="rankType" minOccurs="4" maxOccurs="4" />
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="rankType">
+        <xs:sequence>
+            <xs:element name="name" type="nameType" />
+            <xs:element name="divisions" type="divisionsListType" />
+            <xs:element name="image" type="xs:string" />
+            <xs:element name="playerbase_percent" type="xs:integer" />
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:simpleType name="divisionsListType">
+        <xs:restriction>
+            <xs:simpleType>
+                <xs:list>
+                    <xs:simpleType>
+                        <xs:restriction base="xs:integer">
+                            <xs:minInclusive value="1" />
+                            <xs:maxInclusive value="3" />
+                        </xs:restriction>
+                    </xs:simpleType>
+                </xs:list>
+            </xs:simpleType>
+            <xs:length value="3" />
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:complexType name="teamsType">
+        <xs:sequence>
+            <xs:element name="team" type="teamType" minOccurs="2" maxOccurs="unbounded" />
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="teamType">
+        <xs:sequence>
+            <xs:element name="name" type="nameType" />
+            <xs:element name="players" type="playersType" />
+        </xs:sequence>
+        <xs:attribute ref="id" use="required" />
+    </xs:complexType>
+
+    <xs:complexType name="playersType">
+        <xs:sequence>
+            <xs:element name="player" type="playerTypeEXT" minOccurs="1" maxOccurs="5" />
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="playerTypeEXT">
+        <xs:complexContent>
+            <xs:extension base="playerType">
+                <xs:sequence>
+                    <xs:element name="experience" type="xs:integer" />
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:complexType name="playerType">
+        <xs:sequence>
+            <xs:element name="username">
+                <xs:complexType>
+                    <xs:simpleContent>
+                        <xs:extension base="xs:string">
+                            <xs:attribute name="gametag" type="xs:string" use="required" />
+                        </xs:extension>
+                    </xs:simpleContent>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="player_rank">
+                <xs:complexType>
+                    <xs:simpleContent>
+                        <xs:extension base="xs:string">
+                            <xs:attribute name="division" type="xs:integer" />
+                        </xs:extension>
+                    </xs:simpleContent>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="server">
+                <xs:complexType>
+                    <xs:simpleContent>
+                        <xs:extension base="xs:string">
+                            <xs:attribute name="avg_ping" type="xs:integer" use="required" />
+                        </xs:extension>
+                    </xs:simpleContent>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="personal_info">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="fullname" type="fullnameType" />
+                        <xs:element name="age" type="ageType" />
+                        <xs:element name="country">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                    <xs:maxLength value="50" />
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:element>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="socials">
+                <xs:complexType>
+                    <xs:group ref="socialLinks" />
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="favourites">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="weapon">
+                            <xs:complexType>
+                                <xs:sequence>
+                                    <xs:element name="name" type="nameType" />
+                                    <xs:element name="skin">
+                                        <xs:complexType>
+                                            <xs:simpleContent>
+                                                <xs:extension base="xs:string">
+                                                    <xs:attribute name="src" type="xs:string"
+                                                        use="required" />
+                                                    <xs:attribute name="upgraded" type="xs:string" />
+                                                </xs:extension>
+                                            </xs:simpleContent>
+                                        </xs:complexType>
+                                    </xs:element>
+                                </xs:sequence>
+                                <xs:attribute name="upgraded" type="xs:string" use="required" />
+                            </xs:complexType>
+                        </xs:element>
+                        <xs:element name="agent" type="agentType" />
+                        <xs:choice>
+                            <xs:element name="mouse" type="mouseType" />
+                            <xs:element name="keyboard" type="keyboardType" />
+                        </xs:choice>
+                        <xs:element name="keyboard" type="keyboardType" />
+                        <xs:element name="monitor">
+                            <xs:complexType>
+                                <xs:sequence>
+                                    <xs:element name="name" type="nameType" />
+                                    <xs:element name="size">
+                                        <xs:simpleType>
+                                            <xs:restriction base="xs:string">
+                                                <xs:minLength value="2" />
+                                                <xs:maxLength value="4" />
+                                                <xs:pattern value="[0-9]+&quot;$" />
+                                            </xs:restriction>
+                                        </xs:simpleType>
+                                    </xs:element>
+                                    <xs:element name="panel">
+                                        <xs:complexType>
+                                            <xs:simpleContent>
+                                                <xs:extension base="xs:string">
+                                                    <xs:attribute name="sync_tech" type="xs:string" />
+                                                </xs:extension>
+                                            </xs:simpleContent>
+                                        </xs:complexType>
+                                    </xs:element>
+                                    <xs:element name="resolution">
+                                        <xs:simpleType>
+                                            <xs:restriction base="xs:string">
+                                                <xs:maxLength value="11" />
+                                                <xs:pattern value="[0-9]+ x +[0-9]" />
+                                            </xs:restriction>
+                                        </xs:simpleType>
+                                    </xs:element>
+                                    <xs:element name="refresh_rate">
+                                        <xs:simpleType>
+                                            <xs:restriction base="xs:string">
+                                                <xs:maxLength value="6" />
+                                                <xs:pattern value="[0-9]+Hz" />
+                                            </xs:restriction>
+                                        </xs:simpleType>
+                                    </xs:element>
+                                </xs:sequence>
+                                <xs:attribute name="model" type="xs:string" use="optional" />
+                            </xs:complexType>
+                        </xs:element>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+        </xs:sequence>
+        <xs:attribute ref="id" use="required" />
+        <xs:attribute name="active" type="xs:string" use="required" />
+    </xs:complexType>
+
+    <xs:simpleType name="ageType">
+        <xs:union memberTypes="xs:string xs:integer" />
+    </xs:simpleType>
+
+    <xs:attribute name="id" type="xs:ID" />
+
+    <xs:simpleType name="urlType">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="https?://.+" />
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:attribute name="url" type="urlType" />
+
+    <xs:simpleType name="agentType">
+        <xs:restriction base="xs:string">
+            <xs:maxLength value="50" />
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="mouseType">
+        <xs:restriction base="xs:string">
+            <xs:maxLength value="150" />
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="keyboardType">
+        <xs:restriction base="xs:string">
+            <xs:maxLength value="150" />
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:group name="socialLinks">
+        <xs:sequence>
+            <xs:element name="link" type="linkType" minOccurs="1" maxOccurs="unbounded" />
+        </xs:sequence>
+    </xs:group>
+
+    <xs:complexType name="linkType">
+        <xs:simpleContent>
+            <xs:extension base="xs:string">
+                <xs:attribute ref="url" use="required" />
+            </xs:extension>
+        </xs:simpleContent>
+    </xs:complexType>
+
+    <xs:complexType name="tournamentsType">
+        <xs:sequence>
+            <xs:element name="tournament" type="tournamentType" minOccurs="1" maxOccurs="1" />
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="tournamentType">
+        <xs:all>
+            <xs:element name="name">
+                <xs:complexType mixed="true">
+                    <xs:sequence>
+                        <xs:element name="edition" type="xs:string" />
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="location" type="xs:string" />
+            <xs:element name="date">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="start" type="xs:date" />
+                        <xs:element name="end" type="xs:date" />
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="prize_pool">
+                <xs:complexType>
+                    <xs:simpleContent>
+                        <xs:extension base="xs:integer">
+                            <xs:attribute name="currency" use="required">
+                                <xs:simpleType>
+                                    <xs:restriction base="xs:string">
+                                        <xs:enumeration value="PLN" />
+                                        <xs:enumeration value="EUR" />
+                                        <xs:enumeration value="USD" />
+                                    </xs:restriction>
+                                </xs:simpleType>
+                            </xs:attribute>
+                        </xs:extension>
+                    </xs:simpleContent>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="teams">
+                <xs:complexType>
+                    <xs:group ref="teamGroup" />
+                </xs:complexType>
+            </xs:element>
+
+        </xs:all>
+    </xs:complexType>
+
+    <xs:group name="teamGroup">
+        <xs:sequence>
+            <xs:element name="team" minOccurs="2" maxOccurs="unbounded">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="name" type="nameType" />
+                    </xs:sequence>
+                    <xs:attribute ref="id" use="required" />
+                </xs:complexType>
+            </xs:element>
+        </xs:sequence>
+    </xs:group>
+
+    <xs:simpleType name="fullnameType">
+        <xs:restriction base="xs:string">
+            <xs:maxLength value="169" />
+            <xs:pattern value=".+\s.+" />
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="nameType">
+        <xs:restriction base="xs:string">
+            <xs:maxLength value="256" />
+        </xs:restriction>
+    </xs:simpleType>
+
+
 </xs:schema>
