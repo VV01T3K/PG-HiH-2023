@@ -37,13 +37,15 @@
                 <!ELEMENT socials (link*)>
                     <!ELEMENT link (#PCDATA)>
                         <!ATTLIST link url CDATA #REQUIRED>
-                <!ELEMENT favourites (weapon?, agent?, mouse?, keyboard?, monitor?)>
+                <!ELEMENT favourites (weapon?, agent?, (mouse | tablet)?, keyboard?, monitor?)>
                     <!ELEMENT weapon (name,skin*)>
                         <!ELEMENT skin (#PCDATA)>
                             <!ATTLIST skin src CDATA #REQUIRED>
                             <!ATTLIST skin upgraded (yes|no) #REQUIRED>
                     <!ELEMENT agent (#PCDATA)>
                     <!ELEMENT mouse (#PCDATA)>
+                        <!ATTLIST mouse type CDATA #IMPLIED>
+                    <!ELEMENT tablet (#PCDATA)>
                     <!ELEMENT keyboard (#PCDATA)>
                     <!ELEMENT monitor (name, size, panel, resolution, refresh_rate)>
                         <!ATTLIST monitor model CDATA #REQUIRED>

@@ -224,14 +224,24 @@
     <xs:simpleType name="agentType">
         <xs:restriction base="xs:string">
             <xs:maxLength value="50" />
+            <xs:enumeration value="Jett" />
+            <xs:enumeration value="Reyna" />
+            <xs:enumeration value="Raze" />
+            <xs:enumeration value="Phoenix" />
+            <xs:enumeration value="Breach" />
+            <xs:enumeration value="Skye" />
+            <xs:enumeration value="Sova" />
+            <xs:enumeration value="Killjoy" />
         </xs:restriction>
     </xs:simpleType>
 
-    <xs:simpleType name="mouseType">
-        <xs:restriction base="xs:string">
-            <xs:maxLength value="150" />
-        </xs:restriction>
-    </xs:simpleType>
+    <xs:complexType name="mouseType">
+        <xs:simpleContent>
+            <xs:extension base="xs:string">
+                <xs:attribute type="xs:string" name="type" />
+            </xs:extension>
+        </xs:simpleContent>
+    </xs:complexType>
 
     <xs:simpleType name="keyboardType">
         <xs:restriction base="xs:string">
@@ -328,6 +338,7 @@
     <xs:simpleType name="nameType">
         <xs:restriction base="xs:string">
             <xs:maxLength value="256" />
+            <xs:pattern value="^[a-zA-Z0-9 ]*$" />
         </xs:restriction>
     </xs:simpleType>
 
