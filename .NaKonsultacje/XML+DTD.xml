@@ -1,7 +1,75 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE valorant_state [
+    <!ELEMENT valorant_state (ranks, teams, tournaments)>
 
-<valorant_state xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xsi:noNamespaceSchemaLocation="XSD.xsd">
+
+    <!ENTITY both_handed "ambidextrous">
+
+    <!ENTITY FHD "1920 x 1080">
+    <!ENTITY QHD "2560 x 1440">
+    <!ENTITY UHD "3840 x 2160">
+
+    <!ELEMENT name (#PCDATA | edition)*>
+    <!ELEMENT teams (team+)>
+
+    <!ELEMENT ranks (rank*)>
+    <!ELEMENT rank (name,divisions, image, playerbase_percent)>
+    <!ELEMENT divisions (#PCDATA)>
+    <!ELEMENT image (#PCDATA)>
+    <!ATTLIST image src CDATA #REQUIRED>
+    <!ELEMENT playerbase_percent (#PCDATA)>
+
+    <!ELEMENT team (name , players?)>
+    <!ATTLIST team id ID #REQUIRED>
+    <!ELEMENT players (player*)>
+    <!ELEMENT player (username, player_rank, server?, personal_info?, socials? ,favourites?, experience?)>
+    <!ATTLIST player id ID #REQUIRED>
+    <!ATTLIST player active (yes|no) #REQUIRED>
+    <!ELEMENT username (#PCDATA)>
+    <!ATTLIST username gametag CDATA #REQUIRED>
+    <!ELEMENT player_rank (#PCDATA)>
+    <!ATTLIST player_rank division CDATA #IMPLIED>
+    <!ELEMENT server (#PCDATA)>
+    <!ATTLIST server avg_ping CDATA #IMPLIED>
+    <!ELEMENT personal_info (fullname, age, country)>
+    <!ATTLIST personal_info access (limited|free|prohibited) "limited">
+    <!ELEMENT fullname (#PCDATA)>
+    <!ELEMENT age (#PCDATA)>
+    <!ELEMENT country (#PCDATA)>
+    <!ELEMENT socials (link*)>
+    <!ELEMENT link (#PCDATA)>
+    <!ATTLIST link url CDATA #REQUIRED>
+    <!ELEMENT favourites (weapon?, agent?, (mouse | tablet)?, keyboard?, monitor?)>
+    <!ELEMENT weapon (name,skin*)>
+    <!ELEMENT skin (#PCDATA)>
+    <!ATTLIST skin src CDATA #REQUIRED>
+    <!ATTLIST skin upgraded (yes|no) #REQUIRED>
+    <!ELEMENT agent (#PCDATA)>
+    <!ELEMENT mouse (#PCDATA)>
+    <!ATTLIST mouse type CDATA #IMPLIED>
+    <!ELEMENT tablet (#PCDATA)>
+    <!ELEMENT keyboard (#PCDATA)>
+    <!ELEMENT monitor (name, size, panel, resolution, refresh_rate)>
+    <!ATTLIST monitor model CDATA #REQUIRED>
+    <!ELEMENT size (#PCDATA)>
+    <!ELEMENT panel (#PCDATA)>
+    <!ATTLIST panel sync_tech CDATA "FreeSync">
+    <!ELEMENT resolution (#PCDATA)>
+    <!ELEMENT refresh_rate (#PCDATA)>
+    <!ELEMENT experience (#PCDATA)>
+
+    <!ELEMENT tournaments (tournament*)>
+    <!ELEMENT tournament (name, location, date, prize_pool, teams)>
+    <!ELEMENT location (#PCDATA)>
+    <!ELEMENT date (start, end)>
+    <!ELEMENT start (#PCDATA)>
+    <!ELEMENT end (#PCDATA)>
+    <!ELEMENT prize_pool (#PCDATA)>
+    <!ATTLIST prize_pool currency CDATA "PLN">
+    <!ELEMENT edition (#PCDATA)>
+]>
+
+<valorant_state>
 
     <ranks>
         <rank>
@@ -129,6 +197,7 @@
                     <server avg_ping="50">US</server>
                     <personal_info access="free">
                         <fullname>Gyasi Linje</fullname>
+                        <age>22</age>
                         <country>England</country>
                     </personal_info>
                     <favourites>

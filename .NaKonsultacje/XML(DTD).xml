@@ -6,31 +6,31 @@
     <ranks>
         <rank>
             <name>Platinum</name>
-            <divisions>1 2 3</divisions> <!-- list -->
+            <divisions>1 2 3</divisions>
             <image src="server/iamge">platinum</image>
             <playerbase_percent>30</playerbase_percent>
         </rank>
         <rank>
             <name>Diamond</name>
-            <divisions>1 2 3</divisions> <!-- list -->
+            <divisions>1 2 3</divisions>
             <image src="server/iamge">diamond</image>
             <playerbase_percent>15</playerbase_percent>
         </rank>
         <rank>
             <name>Ascendant</name>
-            <divisions>1 2 3</divisions> <!-- list -->
+            <divisions>1 2 3</divisions>
             <image src="server/iamge">ascendant</image>
             <playerbase_percent>8</playerbase_percent>
         </rank>
         <rank>
             <name>Immortal</name>
-            <divisions>1 2 3</divisions> <!-- list -->
+            <divisions>1 2 3</divisions>
             <image src="server/iamge">immortal</image>
             <playerbase_percent>5</playerbase_percent>
         </rank>
         <rank>
             <name>Radiant</name>
-            <divisions>1</divisions> <!-- list -->
+            <divisions>1</divisions>
             <image src="server/iamge">radiant</image>
             <playerbase_percent>1</playerbase_percent>
         </rank>
