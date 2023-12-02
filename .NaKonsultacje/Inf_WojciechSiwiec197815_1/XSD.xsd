@@ -1,10 +1,9 @@
 <?xml version="1.0"?>
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
 
+    <xs:element name="valorant_state" type="valorant_stateType" />
 
-    <xs:element name="valorant_state" />
-
-    <xs:complexType name="valorant_state">
+    <xs:complexType name="valorant_stateType">
         <xs:sequence>
             <xs:element name="ranks" type="ranksType" />
             <xs:element name="teams" type="teamsType" />
@@ -14,7 +13,7 @@
 
     <xs:complexType name="ranksType">
         <xs:sequence>
-            <xs:element name="rank" type="rankType" minOccurs="4" maxOccurs="4" />
+            <xs:element name="rank" type="rankType" minOccurs="4" maxOccurs="5" />
         </xs:sequence>
     </xs:complexType>
 
@@ -22,7 +21,15 @@
         <xs:sequence>
             <xs:element name="name" type="nameType" />
             <xs:element name="divisions" type="divisionsListType" />
-            <xs:element name="image" type="xs:string" />
+            <xs:element name="image">
+                <xs:complexType>
+                    <xs:simpleContent>
+                        <xs:extension base="xs:string">
+                            <xs:attribute name="src" type="xs:string" use="required" />
+                        </xs:extension>
+                    </xs:simpleContent>
+                </xs:complexType>
+            </xs:element>
             <xs:element name="playerbase_percent" type="percentType" />
         </xs:sequence>
     </xs:complexType>
@@ -39,7 +46,8 @@
                     </xs:simpleType>
                 </xs:list>
             </xs:simpleType>
-            <xs:length value="3" />
+            <xs:minLength value="1" />
+            <xs:maxLength value="3" />
         </xs:restriction>
     </xs:simpleType>
 
@@ -122,6 +130,7 @@
                             </xs:simpleType>
                         </xs:element>
                     </xs:sequence>
+                    <xs:attribute name="access" type="xs:string" use="required" />
                 </xs:complexType>
             </xs:element>
             <xs:element name="socials">
@@ -132,7 +141,7 @@
             <xs:element name="favourites">
                 <xs:complexType>
                     <xs:sequence>
-                        <xs:element name="weapon">
+                        <xs:element name="weapon" minOccurs="0">
                             <xs:complexType>
                                 <xs:sequence>
                                     <xs:element name="name" type="nameType" />
@@ -142,22 +151,22 @@
                                                 <xs:extension base="xs:string">
                                                     <xs:attribute name="src" type="xs:string"
                                                         use="required" />
-                                                    <xs:attribute name="upgraded" type="xs:string" />
+                                                    <xs:attribute name="upgraded" type="xs:string"
+                                                        default="no" />
                                                 </xs:extension>
                                             </xs:simpleContent>
                                         </xs:complexType>
                                     </xs:element>
                                 </xs:sequence>
-                                <xs:attribute name="upgraded" type="xs:string" use="required" />
                             </xs:complexType>
                         </xs:element>
-                        <xs:element name="agent" type="agentType" />
+                        <xs:element name="agent" type="agentType" minOccurs="0" />
                         <xs:choice>
-                            <xs:element name="mouse" type="mouseType" />
-                            <xs:element name="keyboard" type="keyboardType" />
+                            <xs:element name="mouse" type="mouseType" minOccurs="0" />
+                            <xs:element name="tablet" type="xs:string" minOccurs="0" />
                         </xs:choice>
-                        <xs:element name="keyboard" type="keyboardType" />
-                        <xs:element name="monitor">
+                        <xs:element name="keyboard" type="keyboardType" minOccurs="0" />
+                        <xs:element name="monitor" minOccurs="0">
                             <xs:complexType>
                                 <xs:sequence>
                                     <xs:element name="name" type="nameType" />
@@ -166,7 +175,7 @@
                                             <xs:restriction base="xs:string">
                                                 <xs:minLength value="2" />
                                                 <xs:maxLength value="4" />
-                                                <xs:pattern value="[0-9]+&quot;$" />
+                                                <xs:pattern value="[0-9]+&quot;" />
                                             </xs:restriction>
                                         </xs:simpleType>
                                     </xs:element>
@@ -183,7 +192,7 @@
                                         <xs:simpleType>
                                             <xs:restriction base="xs:string">
                                                 <xs:maxLength value="11" />
-                                                <xs:pattern value="[0-9]+ x +[0-9]" />
+                                                <xs:pattern value="\d+ x \d+" />
                                             </xs:restriction>
                                         </xs:simpleType>
                                     </xs:element>
@@ -265,7 +274,7 @@
 
     <xs:complexType name="tournamentsType">
         <xs:sequence>
-            <xs:element name="tournament" type="tournamentType" minOccurs="1" maxOccurs="1" />
+            <xs:element name="tournament" type="tournamentType" minOccurs="1" maxOccurs="3" />
         </xs:sequence>
     </xs:complexType>
 
@@ -338,7 +347,15 @@
     <xs:simpleType name="nameType">
         <xs:restriction base="xs:string">
             <xs:maxLength value="256" />
-            <xs:pattern value="^[a-zA-Z0-9 ]*$" />
+            <xs:pattern value="[a-zA-Z0-9 ]*" />
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="accessType">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="limited" />
+            <xs:enumeration value="free" />
+            <xs:enumeration value="prohibited" />
         </xs:restriction>
     </xs:simpleType>
 

@@ -7,31 +7,31 @@
         <rank>
             <name>Platinum</name>
             <divisions>1 2 3</divisions>
-            <image src="server/iamge">platinum</image>
+            <image src="server/image">platinum</image>
             <playerbase_percent>30</playerbase_percent>
         </rank>
         <rank>
             <name>Diamond</name>
             <divisions>1 2 3</divisions>
-            <image src="server/iamge">diamond</image>
+            <image src="server/image">diamond</image>
             <playerbase_percent>15</playerbase_percent>
         </rank>
         <rank>
             <name>Ascendant</name>
             <divisions>1 2 3</divisions>
-            <image src="server/iamge">ascendant</image>
+            <image src="server/image">ascendant</image>
             <playerbase_percent>8</playerbase_percent>
         </rank>
         <rank>
             <name>Immortal</name>
             <divisions>1 2 3</divisions>
-            <image src="server/iamge">immortal</image>
+            <image src="server/image">immortal</image>
             <playerbase_percent>5</playerbase_percent>
         </rank>
         <rank>
             <name>Radiant</name>
             <divisions>1</divisions>
-            <image src="server/iamge">radiant</image>
+            <image src="server/image">radiant</image>
             <playerbase_percent>1</playerbase_percent>
         </rank>
     </ranks>
@@ -54,7 +54,7 @@
                     <favourites>
                         <weapon>
                             <name>Phantom</name>
-                            <skin src="server/iamge" upgraded="yes">Prime</skin>
+                            <skin src="server/image" upgraded="yes">Prime</skin>
                         </weapon>
                         <agent>Jett</agent>
                         <tablet>Wacom Intuos Pro</tablet>
@@ -63,7 +63,7 @@
                             <name>BenQ Zowie</name>
                             <size>27"</size>
                             <panel sync_tech="G-Sync">IPS</panel>
-                            <resolution>2560 x 1440</resolution>
+                            <resolution>&QHD;</resolution>
                             <refresh_rate>240Hz</refresh_rate>
                         </monitor>
                     </favourites>
@@ -85,16 +85,16 @@
                     <favourites>
                         <weapon>
                             <name>Phantom</name>
-                            <skin src="server/iamge" upgraded="yes">Prime</skin>
+                            <skin src="server/image" upgraded="yes">Prime</skin>
                         </weapon>
                         <agent>Jett</agent>
-                        <mouse type="ambidextrous">Logitech G Pro</mouse>
+                        <mouse type="&both_handed;">Logitech G Pro</mouse>
                         <keyboard>Logitech G Pro</keyboard>
                         <monitor model="XL2546">
                             <name>BenQ Zowie</name>
                             <size>27"</size>
                             <panel sync_tech="G-Sync">IPS</panel>
-                            <resolution>2560 x 1440</resolution>
+                            <resolution>&UHD;</resolution>
                             <refresh_rate>240Hz</refresh_rate>
                         </monitor>
                     </favourites>
@@ -118,7 +118,7 @@
                         <link url="https://instagram.com/">Instagram</link>
                     </socials>
                     <favourites>
-                        <agent>Phenix</agent>
+                        <agent>Phoenix</agent>
                         <keyboard>Logitech G Pro Light</keyboard>
                     </favourites>
                     <experience>562354</experience>
@@ -129,12 +129,16 @@
                     <server avg_ping="50">US</server>
                     <personal_info access="free">
                         <fullname>Gyasi Linje</fullname>
-                        <age>22</age>
+                        <age>23</age>
                         <country>England</country>
                     </personal_info>
+                    <socials>
+                        <link url="https://instagram.com/">Instagram</link>
+                    </socials>
                     <favourites>
                         <weapon>
                             <name>Vandal</name>
+                            <skin src="server/image" upgraded="yes">Prime</skin>
                         </weapon>
                     </favourites>
                     <experience>83583</experience>
