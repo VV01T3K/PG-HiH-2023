@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="xslt.xslt"?>
+<valorant_state>
+
+    <ranks>
+        <rank>
+            <name>Platinum</name>
+            <divisions>1 2 3</divisions>
+            <image src="./Static/img/platyna.webp">platinum</image>
+            <playerbase_percent>20</playerbase_percent>
+        </rank>
+        <rank>
+            <name>Diamond</name>
+            <divisions>1 2 3</divisions>
+            <image src="./Static/img/diamond.webp">diamond</image>
+            <playerbase_percent>15</playerbase_percent>
+        </rank>
+        <rank>
+            <name>Ascendant</name>
+            <divisions>1 2 3</divisions>
+            <image src="./Static/img/ascendant.png">ascendant</image>
+            <playerbase_percent>8</playerbase_percent>
+        </rank>
+        <rank>
+            <name>Immortal</name>
+            <divisions>1 2 3</divisions>
+            <image src="./Static/img/immortal.webp">immortal</image>
+            <playerbase_percent>5</playerbase_percent>
+        </rank>
+        <rank>
+            <name>Radiant</name>
+            <divisions>1</divisions>
+            <image src="./Static/img/radiant.webp">radiant</image>
+            <playerbase_percent>1</playerbase_percent>
+        </rank>
+        <rank>
+            <name>Gold</name>
+            <divisions>1 2 3</divisions>
+            <image src="./Static/img/gold.webp">gold</image>
+            <playerbase_percent>30</playerbase_percent>
+        </rank>
+    </ranks>
+    <teams>
+        <team id="team-1">
+            <name>Team 1</name>
+            <players>
+                <player id="player-1" active="yes">
+                    <username gametag="1234">Nick219</username>
+                    <player_rank division="1">Gold</player_rank>
+                    <server avg_ping="20">EU</server>
+                    <personal_info access="free">
+                        <fullname>Adam Sandler</fullname>
+                        <age>28</age>
+                        <country>Poland</country>
+                    </personal_info>
+                    <socials>
+                        <link url="https://twitter.com/">Twitter | X</link>
+                        <link url="https://facebook.com/">Facebook</link>
+                    </socials>
+                    <favourites>
+                        <weapon>
+                            <name>Phantom</name>
+                            <skin src="server/image" upgraded="yes">Prime</skin>
+                        </weapon>
+                        <agent>Jett</agent>
+                        <tablet>Wacom Intuos Pro</tablet>
+                        <keyboard>Logitech G Pro</keyboard>
+                        <monitor model="XL2546">
+                            <name>BenQ Zowie</name>
+                            <size>27"</size>
+                            <panel sync_tech="G-Sync">IPS</panel>
+                            <resolution>2560 x 1440</resolution>
+                            <refresh_rate>240Hz</refresh_rate>
+                        </monitor>
+                    </favourites>
+                    <experience>562354</experience>
+                </player>
+                <player id="player-2" active="no">
+                    <username gametag="1234">Grimm</username>
+                    <player_rank division="1">Gold</player_rank>
+                    <server avg_ping="20">EU</server>
+                    <personal_info access="prohibited">
+                        <fullname>Adam Sandler</fullname>
+                        <age>dwadzieścia</age>
+                        <country>Poland</country>
+                    </personal_info>
+                    <socials>
+                        <link url="https://twitter.com/">Twitter | X</link>
+                        <link url="https://facebook.com/">Facebook</link>
+                    </socials>
+                    <favourites>
+                        <weapon>
+                            <name>Phantom</name>
+                            <skin src="server/image" upgraded="yes">Prime</skin>
+                        </weapon>
+                        <agent>Jett</agent>
+                        <mouse type="ambidextrous">Logitech G Pro</mouse>
+                        <keyboard>Logitech G Pro</keyboard>
+                        <monitor model="XL2546">
+                            <name>BenQ Zowie</name>
+                            <size>27"</size>
+                            <panel sync_tech="G-Sync">IPS</panel>
+                            <resolution>2560 x 1440</resolution>
+                            <refresh_rate>240Hz</refresh_rate>
+                        </monitor>
+                    </favourites>
+                    <experience>562354</experience>
+                </player>
+            </players>
+        </team>
+        <team id="team-2">
+            <name>Team 2</name>
+            <players>
+                <player id="player-3" active="yes">
+                    <username gametag="2424">Albatros</username>
+                    <player_rank division="1">Immortal</player_rank>
+                    <server avg_ping="10">EU</server>
+                    <personal_info access="prohibited">
+                        <fullname>Kevin Chisholm</fullname>
+                        <age>22</age>
+                        <country>France</country>
+                    </personal_info>
+                    <socials>
+                        <link url="https://instagram.com/">Instagram</link>
+                    </socials>
+                    <favourites>
+                        <agent>Phoenix</agent>
+                        <keyboard>Logitech G Pro Light</keyboard>
+                    </favourites>
+                    <experience>562354</experience>
+                </player>
+                <player id="player-4" active="yes">
+                    <username gametag="5233">Graczyk</username>
+                    <player_rank division="2">Platinum</player_rank>
+                    <server avg_ping="50">US</server>
+                    <personal_info access="free">
+                        <fullname>Gyasi Linje</fullname>
+                        <age>23</age>
+                        <country>England</country>
+                    </personal_info>
+                    <socials>
+                        <link url="https://instagram.com/">Instagram</link>
+                    </socials>
+                    <favourites>
+                        <weapon>
+                            <name>Vandal</name>
+                            <skin src="server/image" upgraded="yes">Prime</skin>
+                        </weapon>
+                    </favourites>
+                    <experience>83583</experience>
+                </player>
+            </players>
+        </team>
+    </teams>
+    <tournaments>
+        <tournament>
+            <name>Valorant Masters<edition>1</edition>
+            </name>
+            <location>Reykjavik, Iceland</location>
+            <date>
+                <start>2021-05-24</start>
+                <end>2021-05-30</end>
+            </date>
+            <prize_pool currency="PLN">600000</prize_pool>
+            <teams>
+                <team id="team_1">
+                    <name>Team 1</name>
+                </team>
+                <team id="team_2">
+                    <name>Team 2</name>
+                </team>
+            </teams>
+        </tournament>
+        <tournament>
+            <name>Valorant Champions<edition>2</edition>
+            </name>
+            <location>Berlin, Germany</location>
+            <date>
+                <start>2021-09-09</start>
+                <end>2021-09-19</end>
+            </date>
+            <prize_pool currency="EUR">100000</prize_pool>
+            <teams>
+                <team id="team_3">
+                    <name>Team 3</name>
+                </team>
+                <team id="team_4">
+                    <name>Team 4</name>
+                </team>
+                <team id="team_5">
+                    <name>Team 5</name>
+                </team>
+            </teams>
+        </tournament>
+    </tournaments>
+</valorant_state>
