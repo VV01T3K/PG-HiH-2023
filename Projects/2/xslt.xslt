@@ -80,15 +80,15 @@
     <xsl:template match="teams">
         <h2>Teams</h2>
         <div>
-            <xsl:for-each select="team">
-                <xsl:if test="players/player[@active='yes']">
-                    <div>
-                        <h3><xsl:value-of select="name"/></h3>
-                        <xsl:apply-templates select="players/player[@active='yes']"/>
-                        <xsl:apply-templates select="players/player[@active='no']"/>
-                    </div>
-                </xsl:if>
-            </xsl:for-each>
+            <xsl:apply-templates select="team[players/player[@active='yes']]"/>
+        </div>
+    </xsl:template>
+    
+    <xsl:template match="team">
+        <div>
+            <h3><xsl:value-of select="name"/></h3>
+            <xsl:apply-templates select="players/player[@active='yes']"/>
+            <xsl:apply-templates select="players/player[@active='no']"/>
         </div>
     </xsl:template>
     
@@ -123,13 +123,7 @@
                             <th>Age</th>
                             <th>Country</th>
                         </tr>
-                        <xsl:for-each select="personal_info">
-                            <tr>
-                                <td><xsl:value-of select="fullname"/></td>
-                                <td><xsl:value-of select="age"/></td>
-                                <td><xsl:value-of select="country"/></td>
-                            </tr>
-                        </xsl:for-each>
+                        <xsl:apply-templates select="personal_info"/>
                     </table>
                 </xsl:when>
                 <xsl:otherwise>
@@ -139,14 +133,24 @@
         </div>
     </xsl:template>
     
-    <xsl:template match="socials">
-        <xsl:for-each select="link">
-            <a href="{@url}">
-                <xsl:value-of select="."/>
-            </a>
-            <br/>
-        </xsl:for-each>
+    <xsl:template match="personal_info">
+        <tr>
+            <td><xsl:value-of select="fullname"/></td>
+            <td><xsl:value-of select="age"/></td>
+            <td><xsl:value-of select="country"/></td>
+        </tr>
     </xsl:template>
+    
+    <xsl:template match="socials">
+        <xsl:apply-templates select="link"/>
+    </xsl:template>
+    
+    <xsl:template match="link">
+        <p><a href="{@url}">
+                <xsl:value-of select="."/>
+            </a></p>
+    </xsl:template>
+    
     
     <xsl:template match="tournament[prize_pool>5000.00]">
         <div>
