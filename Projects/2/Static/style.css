@@ -3,6 +3,7 @@
     padding: 0;
     box-sizing: border-box;
     border-collapse: collapse;
+    color-scheme: dark;
 }
 
 body {
@@ -16,10 +17,30 @@ img {
     box-sizing: content-box;
 }
 
+@keyframes bounce {
+
+    0%,
+    20%,
+    50%,
+    80%,
+    100% {
+        transform: translateY(0);
+    }
+
+    40% {
+        transform: translateY(-10px);
+    }
+
+    60% {
+        transform: translateY(-5px);
+    }
+}
+
 .dark_background {
     background-color: rgba(0, 0, 0, 0.7);
     border-radius: 1rem;
     padding: .5rem;
+    animation: bounce 2s infinite;
 }
 
 div[data-active="no"] {
@@ -42,6 +63,7 @@ div[data-active="no"] {
 table * {
     padding: .5rem;
     text-align: center;
+    font-size: small;
 }
 
 section.ranks>div {
@@ -60,11 +82,20 @@ section.teams {
     margin-bottom: 1rem;
 }
 
-section.tournaments {
+section.tournaments>div {
     display: flex;
     gap: 1rem;
 }
 
-section.tournaments>div {
+section.tournaments>div>div {
     padding: 1rem;
+}
+
+hr {
+    margin: 1rem 0;
+}
+
+hr.half {
+    margin: .5rem 0;
+    width: 30%;
 }

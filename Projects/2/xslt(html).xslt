@@ -33,19 +33,24 @@
     <xsl:template match="valorant_state">
         <h1>Valorant State</h1>
         <p>Current date: <xsl:value-of select="$currentDate"/></p>
+        <hr/>
         <section class='ranks'>
             <xsl:apply-templates select="ranks"/>
         </section>
+        <hr/>
         <section class='teams'>
             <xsl:apply-templates select="teams"/>
         </section>
+        <hr/>
         <section class='tournaments'>
             <xsl:apply-templates select="tournaments"/>
         </section>
+        <hr/>
     </xsl:template>
     
     <xsl:template match="ranks">
         <h2>Ranks</h2>
+        <hr class="half"/>
         <div>
             <xsl:for-each select="rank">
                 <xsl:sort select="playerbase_percent" data-type="number" order="descending"/>
@@ -79,6 +84,7 @@
     
     <xsl:template match="teams">
         <h2>Teams</h2>
+        <hr class="half"/>
         <div>
             <xsl:apply-templates select="team[players/player[@active='yes']]"/>
         </div>
@@ -149,6 +155,14 @@
         <p><a href="{@url}">
                 <xsl:value-of select="."/>
             </a></p>
+    </xsl:template>
+    
+    <xsl:template match="tournaments">
+        <h2>Tournaments</h2>
+        <hr class="half"/>
+        <div>
+            <xsl:apply-templates select="tournament[prize_pool>5000.00]"/>
+        </div>
     </xsl:template>
     
     

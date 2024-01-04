@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-stylesheet type="text/xsl" href="xslt.xslt"?>
+<?xml-stylesheet type="text/xsl" href="xslt(html).xslt"?>
+<?xml-stylesheet type="text/xsl" href="xslt(xml).xslt"?>
 <valorant_state>
 
     <ranks>
@@ -172,7 +173,7 @@
             </teams>
         </tournament>
         <tournament>
-            <name>Valorant Champions<edition>2</edition>
+            <name>Valorant Champions<edition>6</edition>
             </name>
             <location>Berlin, Germany</location>
             <date>
