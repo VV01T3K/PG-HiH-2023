@@ -1,0 +1,74 @@
+<korzonek>
+    <ulubione>
+        <postacie>
+            <agent>Jett</agent>
+            <agent>Sage</agent>
+            <agent>Phoenix</agent>
+        </postacie>
+        <bronie>
+            <bron>
+                <name>Phantom</name>
+                <skorka ulepszone="yes">Prime</skorka>
+            </bron>
+            <bron>
+                <name>Phantom</name>
+                <skorka ulepszone="yes">Prime</skorka>
+            </bron>
+            <bron>
+                <name>Vandal</name>
+                <skorka ulepszone="yes">Prime</skorka>
+            </bron>
+        </bronie>
+    </ulubione>
+    <turnieje>
+        <turniej>
+            <druzyna>
+                <nazwa>team-1</nazwa>
+                <gracze liczebnosc="2">
+                    <gracz doswiadczenie="562354">
+                        <nick>Nick219</nick>
+                        <informacje free="strict">
+                            <pelne_imie>Adam Sandler</pelne_imie>
+                            <wiek>28</wiek>
+                            <EU>Poland</EU>
+                        </informacje>
+                        <Gold>Division: 3</Gold>
+                    </gracz>
+                    <gracz doswiadczenie="562354">
+                        <nick>Grimm</nick>
+                        <informacje prohibited="strict">
+                            <pelne_imie>Adam Sandler</pelne_imie>
+                            <wiek>dwadzieścia</wiek>
+                            <EU>Poland</EU>
+                        </informacje>
+                        <Gold>Division: 1</Gold>
+                    </gracz>
+                </gracze>
+            </druzyna>
+            <druzyna>
+                <nazwa>team-2</nazwa>
+                <gracze liczebnosc="2">
+                    <gracz doswiadczenie="562354">
+                        <nick>Albatros</nick>
+                        <informacje prohibited="strict">
+                            <pelne_imie>Kevin Chisholm</pelne_imie>
+                            <wiek>22</wiek>
+                            <EU>France</EU>
+                        </informacje>
+                        <Immortal>Division: 1</Immortal>
+                    </gracz>
+                    <gracz doswiadczenie="83583">
+                        <nick>Graczyk</nick>
+                        <informacje free="strict">
+                            <pelne_imie>Gyasi Linje</pelne_imie>
+                            <wiek>23</wiek>
+                            <US>New York</US>
+                        </informacje>
+                        <Platinum>Division: 2</Platinum>
+                    </gracz>
+                </gracze>
+            </druzyna>
+        </turniej>
+        <turniej />
+    </turnieje>
+</korzonek>
